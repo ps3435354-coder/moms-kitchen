@@ -4,36 +4,186 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mom's Kitchen | Homemade Recipes</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#fffaf5;color:#3d2b20;line-height:1.6}
-header{background:linear-gradient(135deg,#8f2d14,#d95d25);color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.logo{font-size:28px;font-weight:800}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
-.hero{padding:75px 6%;text-align:center;background:linear-gradient(135deg,#fff0dc,#ffe1c2)}
-.hero h1{font-size:48px;color:#8f2d14;margin-bottom:12px}
-.hero p{font-size:20px;max-width:700px;margin:auto}
-.btn{display:inline-block;margin-top:25px;padding:12px 22px;background:#d95d25;color:white;border-radius:30px;text-decoration:none;font-weight:bold}
-section{padding:55px 6%;max-width:1200px;margin:auto}
-.title{text-align:center;color:#8f2d14;font-size:32px;margin-bottom:30px}
-.search{display:block;width:min(600px,100%);margin:0 auto 30px;padding:14px 18px;border:1px solid #e2c9b8;border-radius:30px;font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #00000012}
-.food{height:190px;background:linear-gradient(135deg,#f7c58c,#e87938);display:flex;align-items:center;justify-content:center;font-size:70px}
-.card-body{padding:20px}
-.card h3{color:#8f2d14;margin-bottom:8px}
-.card p{color:#6d5a4d}
-.about{background:#fff0dc;border-radius:22px;text-align:center}
-.youtube{background:#8f2d14;color:white;border-radius:22px;text-align:center}
-.youtube h2{color:white}
-footer{background:#2f211a;color:#fff;text-align:center;padding:25px;margin-top:20px}
-@media(max-width:700px){header{flex-direction:column;gap:10px}.logo{font-size:24px}nav a{margin:0 6px;font-size:14px}.hero h1{font-size:36px}}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#fffaf5;
+  color:#3d2b20;
+  line-height:1.6
+}
+
+header{
+  background:linear-gradient(135deg,#8f2d14,#d95d25);
+  color:#fff;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-weight:600
+}
+
+.hero{
+  padding:75px 6%;
+  text-align:center;
+  background:linear-gradient(135deg,#fff0dc,#ffe1c2)
+}
+
+.hero h1{
+  font-size:48px;
+  color:#8f2d14;
+  margin-bottom:12px
+}
+
+.hero p{
+  font-size:20px;
+  max-width:700px;
+  margin:auto
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 22px;
+  background:#d95d25;
+  color:white;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold
+}
+
+section{
+  padding:55px 6%;
+  max-width:1200px;
+  margin:auto
+}
+
+.title{
+  text-align:center;
+  color:#8f2d14;
+  font-size:32px;
+  margin-bottom:30px
+}
+
+.search{
+  display:block;
+  width:min(600px,100%);
+  margin:0 auto 30px;
+  padding:14px 18px;
+  border:1px solid #e2c9b8;
+  border-radius:30px;
+  font-size:16px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px
+}
+
+.card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 5px 18px #00000012
+}
+
+.food{
+  height:190px;
+  background:linear-gradient(135deg,#f7c58c,#e87938);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:70px
+}
+
+.card-body{
+  padding:20px
+}
+
+.card h3{
+  color:#8f2d14;
+  margin-bottom:8px
+}
+
+.card p{
+  color:#6d5a4d
+}
+
+.about{
+  background:#fff0dc;
+  border-radius:22px;
+  text-align:center;
+  padding:30px
+}
+
+.youtube{
+  background:#8f2d14;
+  color:white;
+  border-radius:22px;
+  text-align:center;
+  padding:30px
+}
+
+.youtube h2{
+  color:white
+}
+
+footer{
+  background:#2f211a;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:20px
+}
+
+@media(max-width:700px){
+  header{
+    flex-direction:column;
+    gap:10px
+  }
+
+  .logo{
+    font-size:24px
+  }
+
+  nav a{
+    margin:0 6px;
+    font-size:14px
+  }
+
+  .hero h1{
+    font-size:36px
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">🍳 Mom's Kitchen</div>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#recipes">Recipes</a>
@@ -44,73 +194,150 @@ footer{background:#2f211a;color:#fff;text-align:center;padding:25px;margin-top:2
 
 <section class="hero" id="home">
   <h1>स्वाद जो दिल से बने ❤️</h1>
-  <p>Mom's Kitchen में आपका स्वागत है — घर के स्वाद वाली आसान, स्वादिष्ट और प्यार से बनी recipes.</p>
+
+  <p>
+    Mom's Kitchen में आपका स्वागत है — घर के स्वाद वाली आसान,
+    स्वादिष्ट और प्यार से बनी recipes.
+  </p>
+
   <a class="btn" href="#recipes">Recipes देखें</a>
 </section>
 
 <section id="recipes">
+
   <h2 class="title">🍽️ हमारी लोकप्रिय Recipes</h2>
-  <input class="search" id="search" type="text" placeholder="Recipe खोजें...">
+
+  <input
+    class="search"
+    id="search"
+    type="text"
+    placeholder="Recipe खोजें..."
+  >
 
   <div class="grid" id="recipeGrid">
+
     <article class="card" data-name="spicy aloo sabji आलू सब्जी">
+
       <div class="food">🥔🌶️</div>
+
       <div class="card-body">
         <h3>Spicy Aloo Sabji</h3>
-        <p>मसालेदार और स्वादिष्ट आलू की आसान घरेलू सब्जी।</p>
+
+        <p>
+          मसालेदार और स्वादिष्ट आलू की आसान घरेलू सब्जी।
+        </p>
+
         <a class="btn" href="#">Recipe देखें</a>
       </div>
+
     </article>
 
-    <article class="card" data-name="creamy detox raita रaita रायता">
+
+    <article class="card" data-name="creamy detox raita raita रायता">
+
       <div class="food">🥗🥒</div>
+
       <div class="card-body">
         <h3>Creamy Detox Raita</h3>
-        <p>ताजा दही और सब्जियों से बना creamy और refreshing raita.</p>
+
+        <p>
+          ताजा दही और सब्जियों से बना creamy और refreshing raita.
+        </p>
+
         <a class="btn" href="#">Recipe देखें</a>
       </div>
+
     </article>
+
 
     <article class="card" data-name="home style recipe घर की रेसिपी">
+
       <div class="food">🍲</div>
+
       <div class="card-body">
         <h3>Home Style Recipe</h3>
-        <p>घर के स्वाद और आसान ingredients के साथ delicious खाना।</p>
+
+        <p>
+          घर के स्वाद और आसान ingredients के साथ delicious खाना।
+        </p>
+
         <a class="btn" href="#">Recipe देखें</a>
       </div>
+
     </article>
+
   </div>
 </section>
+
 
 <section id="about">
+
   <div class="about">
+
     <h2 class="title">👩‍🍳 About Mom's Kitchen</h2>
-    <p>Mom's Kitchen का उद्देश्य है आपको ऐसी recipes देना जिन्हें आप घर पर आसानी से बना सकें। हर recipe में स्वाद, सरलता और घर जैसा प्यार शामिल है।</p>
+
+    <p>
+      Mom's Kitchen का उद्देश्य है आपको ऐसी recipes देना
+      जिन्हें आप घर पर आसानी से बना सकें। हर recipe में स्वाद,
+      सरलता और घर जैसा प्यार शामिल है।
+    </p>
+
   </div>
+
 </section>
+
 
 <section id="youtube">
+
   <div class="youtube">
+
     <h2>📺 हमारा YouTube Channel</h2>
-    <p style="margin-top:10px">नई recipes और cooking videos देखने के लिए हमारे YouTube channel को जरूर देखें।</p>
-    <a class="btn" style="background:#fff;color:#8f2d14" href="#" target="_blank">YouTube पर जाएँ</a>
+
+    <p style="margin-top:10px">
+      नई recipes और cooking videos देखने के लिए हमारे
+      YouTube channel को जरूर देखें।
+    </p>
+
+    <a
+      class="btn"
+      style="background:#fff;color:#8f2d14"
+      href="#"
+      target="_blank">
+      YouTube पर जाएँ
+    </a>
+
   </div>
+
 </section>
 
+
 <footer>
-  <p>© 2026 Mom's Kitchen • Made with ❤️ and delicious food</p>
+
+  <p>
+    © 2026 Mom's Kitchen • Made with ❤️ and delicious food
+  </p>
+
 </footer>
 
+
 <script>
+
 const search = document.getElementById("search");
 const cards = document.querySelectorAll(".card");
 
 search.addEventListener("input", () => {
+
   const q = search.value.toLowerCase().trim();
+
   cards.forEach(card => {
-    card.style.display = card.dataset.name.includes(q) ? "" : "none";
+
+    card.style.display =
+      card.dataset.name.includes(q) ? "" : "none";
+
   });
+
 });
+
 </script>
 
 </body>
